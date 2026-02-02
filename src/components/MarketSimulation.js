@@ -99,6 +99,14 @@ export default function MarketSimulation() {
 
   // Get active contestants (who have a price > 0)
   const activeContestants = Object.keys(currentDay.prices).filter(c => currentDay.prices[c] > 0);
+  
+  // Calculate daily change for sparklines color
+  const getTrend = (contestant) => {
+    if (history.length < 2) return 0;
+    const curr = history[history.length - 1][contestant] || 0;
+    const prev = history[history.length - 2][contestant] || curr;
+    return curr - prev;
+  };
 
   return (
     <div className="container margin-vert--lg">
@@ -135,151 +143,139 @@ export default function MarketSimulation() {
         </div>
       </div>
 
-      <div className="row">
-        {/* Left Column: Big Board & Stats */}
-        <div className="col col--8">
-          
-          {/* Main Price Chart */}
-          <div className="card margin-bottom--md">
-             <div className="card__header">
-               <h3>Market Prices (P_close)</h3>
+      {/* Row: System Diagnostic (Big Board - Centered & Enlarged) */}
+      <div className="row margin-bottom--lg">
+         <div className="col col--12">
+           <div className="card shadow--md" style={{background: '#f8f9fa', border: '1px solid #ddd'}}>
+             <div className="card__header" style={{display:'flex', justifyContent:'space-between', borderBottom: '1px solid #eee'}}>
+               <h3>System Diagnostic (Central EMA Board)</h3>
+               <span className="badge badge--warning">REAL-TIME MONITOR</span>
              </div>
-             <div className="card__body" style={{height: '400px', width: '100%'}}>
-               <ResponsiveContainer width="100%" height="100%">
-                 <LineChart data={history}>
-                   <CartesianGrid strokeDasharray="3 3" vertical={false} opacity={0.3} />
-                   <XAxis dataKey="name" hide={true} />
-                   <YAxis domain={[0, 1]} />
-                   <Tooltip 
-                      contentStyle={{backgroundColor: '#fff', borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}
-                   />
-                   {activeContestants.map((c, i) => (
-                     <Line 
-                        key={c} 
-                        type="monotone" 
-                        dataKey={c} 
-                        stroke={COLORS[i % COLORS.length]} 
-                        step="monotone" // Smooth curve
-                        dot={false}
-                        strokeWidth={2}
-                        isAnimationActive={false}
-                     />
-                   ))}
-                   {currentDay.is_show_day && (
-                      <ReferenceLine x={`W${currentDay.week}D${currentDay.day_of_week}`} stroke="red" label="Show" />
-                   )}
-                 </LineChart>
-               </ResponsiveContainer>
-             </div>
-          </div>
-
-          {/* System Health (Big Board EMA) */}
-          <div className="row">
-             <div className="col col--12">
-               <div className="card margin-bottom--md" style={{background: '#f8f9fa'}}>
-                 <div className="card__header" style={{display:'flex', justifyContent:'space-between'}}>
-                   <h3>System Diagnostic (Big Board)</h3>
-                   <span className="badge badge--warning">EMA Error Tracking</span>
-                 </div>
-                 <div className="card__body">
-                   <div style={{display: 'flex', gap: '2rem', marginBottom: '1rem'}}>
-                      <div>
-                        <small>Current Adaptive Weight (w_t)</small>
-                        <h2 style={{color: '#d35400'}}>{currentDay.w_t.toFixed(4)}</h2>
-                      </div>
-                      <div>
-                        <small>System EMA Error</small>
-                        <h2 style={{color: currentDay.ema_error > 0.15 ? '#c0392b' : '#27ae60'}}>
-                          {currentDay.ema_error.toFixed(4)}
-                        </h2>
-                      </div>
-                   </div>
-                   <div style={{height: '150px', width: '100%'}}>
-                     <ResponsiveContainer width="100%" height="100%">
-                       <AreaChart data={history}>
-                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                         <XAxis dataKey="name" hide={true} />
-                         <YAxis domain={[0, 'auto']} />
-                         <Tooltip />
-                         <Area type="monotone" dataKey="ema_error" stroke="#8884d8" fill="#8884d8" name="EMA Error" isAnimationActive={false}/>
-                         <Line type="step" dataKey="w_t" stroke="#d35400" strokeWidth={2} name="Weight (w_t)" dot={false} isAnimationActive={false}/>
-                       </AreaChart>
-                     </ResponsiveContainer>
-                   </div>
-                 </div>
+             <div className="card__body">
+               <div style={{display: 'flex', gap: '4rem', marginBottom: '1rem', justifyContent: 'center'}}>
+                  <div style={{textAlign: 'center'}}>
+                    <small style={{textTransform: 'uppercase', color: '#666', fontWeight: 'bold'}}>Weight (w_t)</small>
+                    <h1 style={{color: '#d35400', fontSize: '2.5rem', margin: 0}}>{currentDay.w_t.toFixed(4)}</h1>
+                  </div>
+                  <div style={{textAlign: 'center'}}>
+                    <small style={{textTransform: 'uppercase', color: '#666', fontWeight: 'bold'}}>EMA Error</small>
+                    <h1 style={{color: currentDay.ema_error > 0.15 ? '#c0392b' : '#27ae60', fontSize: '2.5rem', margin: 0}}>
+                      {currentDay.ema_error.toFixed(4)}
+                    </h1>
+                  </div>
+               </div>
+               <div style={{height: '300px', width: '100%'}}>
+                 <ResponsiveContainer width="100%" height="100%">
+                   <AreaChart data={history}>
+                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                     <XAxis dataKey="name" hide={true} />
+                     <YAxis orientation="right" domain={[0, 'auto']} tick={{fontSize: 12}} />
+                     <Tooltip />
+                     <Area type="monotone" dataKey="ema_error" stroke="#8884d8" fill="#8884d8" fillOpacity={0.1} name="EMA Error" isAnimationActive={false}/>
+                     <Line type="step" dataKey="w_t" stroke="#d35400" strokeWidth={3} name="System Weight (w_t)" dot={false} isAnimationActive={false}/>
+                     {currentDay.is_show_day && (
+                        <ReferenceLine x={`W${currentDay.week}D${currentDay.day_of_week}`} stroke="red" strokeDasharray="3 3" />
+                     )}
+                   </AreaChart>
+                 </ResponsiveContainer>
                </div>
              </div>
-          </div>
+           </div>
+         </div>
+      </div>
 
+      <div className="row">
+        {/* Left Column: Contestant Grid (Small Windows) */}
+        <div className="col col--9">
+          <div className="row">
+            {activeContestants.sort((a,b) => currentDay.prices[b] - currentDay.prices[a]).map((c) => {
+               const trend = getTrend(c);
+               const trendColor = trend > 0 ? '#2ecc71' : (trend < 0 ? '#e74c3c' : '#bdc3c7');
+               const userShares = portfolio[c] || 0;
+               
+               return (
+                <div key={c} className="col col--4 margin-bottom--md">
+                   <div className="card shadow--lw" style={{height: '100%'}}>
+                      <div className="card__header" style={{padding: '0.8rem 1rem', display:'flex', justifyContent:'space-between', alignItems:'flex-start'}}>
+                         <div style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%'}}>
+                            <h4 style={{margin:0}} title={c}>{c}</h4>
+                            <small>{userShares > 0 ? `${userShares} shares` : 'No position'}</small>
+                         </div>
+                         <div style={{textAlign: 'right'}}>
+                            <h3 style={{margin:0, color: 'var(--ifm-color-primary)'}}>{currentDay.prices[c].toFixed(2)}</h3>
+                         </div>
+                      </div>
+                      
+                      <div className="card__body" style={{padding: '0 1rem'}}>
+                         {/* Mini Sparkline */}
+                         <div style={{height: '100px', width: '100%'}}>
+                           <ResponsiveContainer width="100%" height="100%">
+                             <LineChart data={history}>
+                               <Line 
+                                 type="monotone" 
+                                 dataKey={c} 
+                                 stroke={trendColor} 
+                                 strokeWidth={2} 
+                                 dot={false} 
+                                 isAnimationActive={false} 
+                               />
+                             </LineChart>
+                           </ResponsiveContainer>
+                         </div>
+                      </div>
+                      
+                      <div className="card__footer" style={{padding: '0.8rem'}}>
+                         <div className="button-group button-group--block">
+                             <button 
+                                 className="button button--success button--sm button--outline"
+                                 disabled={!isMarketOpen}
+                                 onClick={() => handleTrade(c, 'buy')}
+                                 title="Buy 100 shares">
+                                 Buy
+                             </button>
+                             <button 
+                                 className="button button--danger button--sm button--outline"
+                                 disabled={!isMarketOpen || userShares <= 0}
+                                 onClick={() => handleTrade(c, 'sell')}
+                                 title="Sell 100 shares">
+                                 Sell
+                             </button>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+               );
+            })}
+          </div>
         </div>
 
-        {/* Right Column: Trading Desk */}
-        <div className="col col--4">
-           {/* User Wallet */}
-           <div className="card margin-bottom--md">
+        {/* Right Column: Wallet & Info */}
+        <div className="col col--3">
+           <div className="card shadow--md sticky-top" style={{position: 'sticky', top: '80px'}}>
+             <div className="card__header">
+                <h3><Users size={16}/> Profile</h3>
+             </div>
              <div className="card__body text--center">
                 <small>My Coin Balance</small>
-                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '2.5rem', margin: '0.5rem 0'}}>
+                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '2rem', margin: '0.5rem 0'}}>
                    ₵ {userFunds.toFixed(0)}
                 </h1>
-                <p style={{fontSize: '0.9rem', color: '#666'}}>
-                   Portfolio Value: ₵ {Object.entries(portfolio).reduce((acc, [name, amt]) => {
-                      const p = currentDay.prices[name] || 0;
-                      return acc + (p * amt);
-                   }, 0).toFixed(0)}
-                </p>
-             </div>
-           </div>
-
-           {/* Market List */}
-           <div className="card" style={{height: '600px', overflowY: 'auto'}}>
-              <div className="card__header">
-                <h3>Active Markets</h3>
-              </div>
-              <div className="card__body">
-                 {activeContestants.sort((a,b) => currentDay.prices[b] - currentDay.prices[a]).map((c, i) => (
-                    <div key={c} style={{
-                        padding: '10px', 
-                        borderBottom: '1px solid #eee', 
-                        background: (portfolio[c] > 0) ? '#fff8e1' : 'transparent'
-                    }}>
-                       <div style={{display:'flex', justifyContent: 'space-between', marginBottom: '5px'}}>
-                          <strong>{c}</strong>
-                          <span style={{color: 'var(--ifm-color-primary)', fontWeight: 'bold'}}>
-                            {currentDay.prices[c].toFixed(3)}
-                          </span>
-                       </div>
-                       
-                       <div style={{display:'grid', gridTemplateColumns: '1fr 1fr', gap: '5px'}}>
-                           <button 
-                             className="button button--success button--sm button--outline"
-                             disabled={!isMarketOpen}
-                             onClick={() => handleTrade(c, 'buy')}>
-                             Buy
-                           </button>
-                           <button 
-                             className="button button--danger button--sm button--outline"
-                             disabled={!isMarketOpen || (portfolio[c]||0) <= 0}
-                             onClick={() => handleTrade(c, 'sell')}>
-                             Sell {(portfolio[c] && portfolio[c]>0) ? `(${portfolio[c]})` : ''}
-                           </button>
-                       </div>
-                    </div>
-                 ))}
-                 
-                 {currentDay.eliminated_today && currentDay.eliminated_today.length > 0 && (
-                     <div className="alert alert--danger margin-top--md">
-                        <strong>Eliminated Today:</strong>
-                        <ul style={{margin:0, paddingLeft:'1rem'}}>
-                           {currentDay.eliminated_today.map(e => <li key={e}>{e}</li>)}
-                        </ul>
+                <hr/>
+                <div style={{textAlign:'left'}}>
+                   <small><strong>Next Elimination:</strong></small>
+                   <p>Saturday (Day 7)</p>
+                   {currentDay.eliminated_today && currentDay.eliminated_today.length > 0 && (
+                     <div className="alert alert--danger" style={{padding:'0.5rem'}}>
+                        <strong>OUT:</strong> {currentDay.eliminated_today.join(', ')}
                      </div>
-                 )}
-              </div>
+                   )}
+                </div>
+             </div>
            </div>
         </div>
       </div>
     </div>
   );
 }
+
 
