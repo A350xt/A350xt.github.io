@@ -1,0 +1,76 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Custom Bright / Flat Theme */
+:root {
+  /* Bright Orange-Red Primary */
+  --ifm-color-primary: #ff6b35;
+  --ifm-color-primary-dark: #e56030;
+  --ifm-color-primary-darker: #d95a2d;
+  --ifm-color-primary-darkest: #b34b25;
+  --ifm-color-primary-light: #ff7a4b;
+  --ifm-color-primary-lighter: #ff8256;
+  --ifm-color-primary-lightest: #ff9a76;
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Backgrounds */
+  --ifm-background-color: #fcfcfc;
+  --ifm-navbar-background-color: #ffffff;
+}
+
+/* Dark mode override (make it less purple, more slate) */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff8c61;
+  --ifm-color-primary-dark: #ff7a4b;
+  --ifm-color-primary-darker: #ff6b35;
+  --ifm-color-primary-darkest: #e56030;
+  --ifm-color-primary-light: #ff9e77;
+  --ifm-color-primary-lighter: #ffa782;
+  --ifm-color-primary-lightest: #ffc2a6;
+  
+  --ifm-background-color: #1a1a1a;
+}
+
+/* Buttons */
+.button--primary {
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+    color: white;
+}
+
+.button--secondary {
+    background-color: #2ec4b6; /* Teal */
+    border-color: #2ec4b6;
+    color: white;
+}
+
+.ifm-navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.hero {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    color: #2d3436;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: none;
+    transition: transform 0.2s;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
