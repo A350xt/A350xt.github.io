@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'APSM-B3R Model',
+  title: 'AMO Model',
   tagline: 'Fixing the Vote with Market Dynamics',
   favicon: 'img/favicon.ico',
 
@@ -52,7 +52,7 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'APSM-B3R',
+        title: 'AMO',
         logo: {
           alt: 'Model Logo',
           src: 'img/logo.svg',

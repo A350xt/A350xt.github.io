@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# APSM-B3R Model Guide
+# AMO Model Guide
 
 ## Overview
 
-The **APSM-B3R** (Adaptive Prediction Stock Market with Bottom-3 Rescue) is a novel voting mechanism designed to replace traditional popularity contests (like "So You Think You Can Dance") with a system that values **Performance** over **Popularity**.
+The **AMO** (Adaptive Market Operations) is a novel voting mechanism designed to replace traditional popularity contests (like "So You Think You Can Dance") with a system that values **Performance** over **Popularity**.
 
 ### Core Philosophy
 
@@ -34,7 +34,7 @@ The system intelligently balances **Judge Scores** and **Fan Market Prices**.
 > Score_Total = w_t × Score_Market + (1 - w_t) × Score_Judge
 
 ### 3. The Bottom-3 Rescue (B3R)
-In the traditional system, specific vote counts are hidden. In APSM-B3R:
+In the traditional system, specific vote counts are hidden. In AMO:
 1.  The bottom 3 contestants based on Combined Score are identified.
 2.  Among these 3, the one with the highest **Market Price** (Fan Faith) is saved (unless Judge score is extremely low).
 3.  This prevents "Shock Eliminations" of talented favorites while filtering out "Viral but Bad" performers.
@@ -43,7 +43,7 @@ In the traditional system, specific vote counts are hidden. In APSM-B3R:
 
 ## Why It's Better
 
-| Feature | Old System | APSM-B3R Model |
+| Feature | Old System | AMO Model |
 | :--- | :--- | :--- |
 | **Logic** | Popularity Contest | Market Prediction |
 | **Feedback** | Binary (Vote/No Vote) | Continuous Price Signal |

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, ReferenceLine } from 'recharts';
-import { Play, Pause, FastForward, TrendingUp, TrendingDown, Lock, Unlock, AlertTriangle } from 'lucide-react';
+import { Play, Pause, FastForward, TrendingUp, TrendingDown, Lock, Unlock, AlertTriangle, Users } from 'lucide-react';
 import marketData from '../data/marketData.json';
 
 const COLORS = [
