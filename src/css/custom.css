@@ -36,17 +36,59 @@
   --ifm-background-color: #1a1a1a;
 }
 
-/* Buttons */
+/* Buttons - lively style */
+.button {
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .button--primary {
-    background-color: var(--ifm-color-primary);
-    border-color: var(--ifm-color-primary);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff9f1c 100%);
+    border: none;
     color: white;
 }
 
 .button--secondary {
-    background-color: #2ec4b6; /* Teal */
-    border-color: #2ec4b6;
+    background: linear-gradient(135deg, #2ec4b6 0%, #20998d 100%); /* Teal gradient */
+    border: none;
     color: white;
+}
+
+/* Make Success/Danger buttons pop more */
+.button--success {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    border-color: transparent;
+    color: white !important; /* Force white text even if outline */
+}
+
+.button--danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border-color: transparent;
+    color: white !important;
+}
+
+/* Card liveliness */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
 .ifm-navbar__link--active {

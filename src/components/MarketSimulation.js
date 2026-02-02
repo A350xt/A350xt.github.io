@@ -227,17 +227,19 @@ export default function MarketSimulation() {
                       <div className="card__footer" style={{padding: '0.8rem'}}>
                          <div className="button-group button-group--block">
                              <button 
-                                 className="button button--success button--sm button--outline"
+                                 className="button button--success button--sm"
                                  disabled={!isMarketOpen}
                                  onClick={() => handleTrade(c, 'buy')}
-                                 title="Buy 100 shares">
+                                 title="Buy 100 shares"
+                                 style={{opacity: !isMarketOpen ? 0.5 : 1}}>
                                  Buy
                              </button>
                              <button 
-                                 className="button button--danger button--sm button--outline"
+                                 className="button button--danger button--sm"
                                  disabled={!isMarketOpen || userShares <= 0}
                                  onClick={() => handleTrade(c, 'sell')}
-                                 title="Sell 100 shares">
+                                 title="Sell 100 shares"
+                                 style={{opacity: (!isMarketOpen || userShares <= 0) ? 0.5 : 1}}>
                                  Sell
                              </button>
                          </div>
