@@ -121,7 +121,7 @@ export default function MarketSimulation() {
                       </small>
                     </div>
                     
-                    <div style={{height: '100px', width: '100%', marginTop: '10px'}}>
+                    <div style={{height: '200px', width: '100%', marginTop: '10px', minHeight: '200px'}}>
                       <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={c.history.map((h, i) => ({week: i, price: h}))}>
                           <Line type="monotone" dataKey="price" stroke="var(--ifm-color-primary)" strokeWidth={2} dot={false} />

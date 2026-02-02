@@ -29,9 +29,9 @@ The system intelligently balances **Judge Scores** and **Fan Market Prices**.
 *   If the Market is **Correct** (predicts eliminations well), the **Fan Weight** increases.
 *   If the Market is **Biased** (saving bad dancers), the **Judge Weight** increases automatically.
 
-$$
-Score_{Total} = w_t \times Score_{Market} + (1 - w_t) \times Score_{Judge}
-$$
+> **Formula:**
+>
+> Score_Total = w_t × Score_Market + (1 - w_t) × Score_Judge
 
 ### 3. The Bottom-3 Rescue (B3R)
 In the traditional system, specific vote counts are hidden. In APSM-B3R:
