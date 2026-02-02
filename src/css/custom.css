@@ -75,9 +75,10 @@
 }
 
 .button--danger {
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    background: linear-gradient(135deg, #ff2400 0%, #cc0000 100%); /* Scarlet / Vivid Red */
     border-color: transparent;
     color: white !important;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
 }
 
 /* Card liveliness */
