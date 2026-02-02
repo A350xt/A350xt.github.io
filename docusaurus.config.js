@@ -21,6 +21,7 @@ const config = {
   // GitHub pages deployment config.
   organizationName: 'A350xt', // Usually your GitHub org/user name.
   projectName: 'A350xt.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

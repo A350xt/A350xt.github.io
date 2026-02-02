@@ -1,0 +1,1641 @@
+[
+  {
+    "day_global": 1,
+    "week": 1,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.49064272548060883,
+      "Jesse Metcalfe": 0.5270368712182972,
+      "Chrishell Stause": 0.5371516872547162,
+      "Skai Jackson": 0.48968893189850043,
+      "Justina Machado": 0.5361212985774559,
+      "Charles Oakley": 0.4311404486700983,
+      "Veron Davis": 0.5311964579919572,
+      "Johnny Weir": 0.5574847532751052,
+      "Nev Schulman": 0.5632411817979189,
+      "AJ McLean": 0.5132354282944576,
+      "Nelly": 0.5105176387768263,
+      "Kaitlyn Bristowe": 0.534500964476454,
+      "Carole Baskin": 0.4940298903232598,
+      "Monica Aldama": 0.5537487724652498,
+      "Jeannie Mai": 0.48596372240460944
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 2,
+    "week": 1,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.4158820122511874,
+      "Jesse Metcalfe": 0.5839980855419893,
+      "Chrishell Stause": 0.5968647241221403,
+      "Skai Jackson": 0.5469109349676652,
+      "Justina Machado": 0.5354188581872155,
+      "Charles Oakley": 0.3698057672741034,
+      "Veron Davis": 0.4636035553614074,
+      "Johnny Weir": 0.6149584271900155,
+      "Nev Schulman": 0.5817152619852298,
+      "AJ McLean": 0.39862970558195543,
+      "Nelly": 0.4641723607921532,
+      "Kaitlyn Bristowe": 0.6181645452192884,
+      "Carole Baskin": 0.437832311606134,
+      "Monica Aldama": 0.644806448302958,
+      "Jeannie Mai": 0.5641279460924238
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 3,
+    "week": 1,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.43122448620441506,
+      "Jesse Metcalfe": 0.6261278918469638,
+      "Chrishell Stause": 0.6803619923376538,
+      "Skai Jackson": 0.5370084992613369,
+      "Justina Machado": 0.6072976606234567,
+      "Charles Oakley": 0.3698534879883598,
+      "Veron Davis": 0.5909137483070572,
+      "Johnny Weir": 0.6199827770223999,
+      "Nev Schulman": 0.5852911596449669,
+      "AJ McLean": 0.5788872066461598,
+      "Nelly": 0.4653771780962275,
+      "Kaitlyn Bristowe": 0.6284979811353972,
+      "Carole Baskin": 0.4084207287937007,
+      "Monica Aldama": 0.6208255129985777,
+      "Jeannie Mai": 0.545790869267005
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 4,
+    "week": 1,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.44524786067419997,
+      "Jesse Metcalfe": 0.7274158630785811,
+      "Chrishell Stause": 0.676500704669408,
+      "Skai Jackson": 0.5798772729323843,
+      "Justina Machado": 0.6721140603531979,
+      "Charles Oakley": 0.3074983943774112,
+      "Veron Davis": 0.45585549096302463,
+      "Johnny Weir": 0.7363362973541953,
+      "Nev Schulman": 0.6091423705383142,
+      "AJ McLean": 0.6178842646561901,
+      "Nelly": 0.613897190637357,
+      "Kaitlyn Bristowe": 0.6674855587451912,
+      "Carole Baskin": 0.38468965804053173,
+      "Monica Aldama": 0.607729170923605,
+      "Jeannie Mai": 0.5975587093446162
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 5,
+    "week": 1,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.45261235446602094,
+      "Jesse Metcalfe": 0.7181812873208754,
+      "Chrishell Stause": 0.7485836784703142,
+      "Skai Jackson": 0.7001611532353443,
+      "Justina Machado": 0.6820669966400725,
+      "Charles Oakley": 0.17882107850294093,
+      "Veron Davis": 0.5182274987874749,
+      "Johnny Weir": 0.8788562769052798,
+      "Nev Schulman": 0.7682677246837262,
+      "AJ McLean": 0.5822432180597475,
+      "Nelly": 0.514938107601342,
+      "Kaitlyn Bristowe": 0.7319578790520601,
+      "Carole Baskin": 0.46914436999946424,
+      "Monica Aldama": 0.6482576883231638,
+      "Jeannie Mai": 0.5906989545462069
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 6,
+    "week": 1,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.38273772040070275,
+      "Jesse Metcalfe": 0.7478049128980357,
+      "Chrishell Stause": 0.821432631444661,
+      "Skai Jackson": 0.7120278309954907,
+      "Justina Machado": 0.7650463304834523,
+      "Charles Oakley": 0.1910766693214351,
+      "Veron Davis": 0.5166188508360391,
+      "Johnny Weir": 0.8514114936020015,
+      "Nev Schulman": 0.7818052893608709,
+      "AJ McLean": 0.6291847700904323,
+      "Nelly": 0.5572850261829521,
+      "Kaitlyn Bristowe": 0.7933091729251746,
+      "Carole Baskin": 0.3983166217753841,
+      "Monica Aldama": 0.6700826460968975,
+      "Jeannie Mai": 0.5953813442191911
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 7,
+    "week": 1,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.65,
+    "ema_error": 0.1534751587441303,
+    "prices": {
+      "Anne Heche": 0.3621869655834759,
+      "Jesse Metcalfe": 0.7982733855884171,
+      "Chrishell Stause": 0.8499113079568558,
+      "Skai Jackson": 0.7583582225880784,
+      "Justina Machado": 0.8027359443711884,
+      "Charles Oakley": 0.1,
+      "Veron Davis": 0.5385775644612536,
+      "Johnny Weir": 0.9,
+      "Nev Schulman": 0.8155601043819843,
+      "AJ McLean": 0.6311063003230132,
+      "Nelly": 0.5731536597320933,
+      "Kaitlyn Bristowe": 0.808629514467653,
+      "Carole Baskin": 0.3785168162517083,
+      "Monica Aldama": 0.7400948458044899,
+      "Jeannie Mai": 0.6019304452677106
+    },
+    "eliminated_today": [
+      "Charles Oakley"
+    ]
+  },
+  {
+    "day_global": 8,
+    "week": 2,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.3212167389367316,
+      "Jesse Metcalfe": 0.8193537712351836,
+      "Chrishell Stause": 0.8319547570964043,
+      "Skai Jackson": 0.7459195419369583,
+      "Justina Machado": 0.7769178641753993,
+      "Veron Davis": 0.5299599328427314,
+      "Johnny Weir": 0.9013264951402876,
+      "Nev Schulman": 0.7846229021419441,
+      "AJ McLean": 0.6549483942731956,
+      "Nelly": 0.593928398649566,
+      "Kaitlyn Bristowe": 0.7982297863681082,
+      "Carole Baskin": 0.34674011171882074,
+      "Monica Aldama": 0.7452464845629025,
+      "Jeannie Mai": 0.576146318907901
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 9,
+    "week": 2,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.13990238130611027,
+      "Jesse Metcalfe": 0.8209866066787128,
+      "Chrishell Stause": 0.755818811243371,
+      "Skai Jackson": 0.7927184564538516,
+      "Justina Machado": 0.7745444859187313,
+      "Veron Davis": 0.4468074599761054,
+      "Johnny Weir": 0.9384630292095095,
+      "Nev Schulman": 0.8275512460295353,
+      "AJ McLean": 0.6514032840767361,
+      "Nelly": 0.575355125736252,
+      "Kaitlyn Bristowe": 0.8555140858832415,
+      "Carole Baskin": 0.30780249790440156,
+      "Monica Aldama": 0.7415352424128081,
+      "Jeannie Mai": 0.6196174439355413
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 10,
+    "week": 2,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.24716139545567256,
+      "Jesse Metcalfe": 0.7908000602036976,
+      "Chrishell Stause": 0.8505818837771325,
+      "Skai Jackson": 0.7806872437439372,
+      "Justina Machado": 0.7924329380574887,
+      "Veron Davis": 0.4560687558561408,
+      "Johnny Weir": 0.8898415923752773,
+      "Nev Schulman": 0.7957988770232389,
+      "AJ McLean": 0.5961609011368728,
+      "Nelly": 0.4458284409798491,
+      "Kaitlyn Bristowe": 0.8362423010750573,
+      "Carole Baskin": 0.3177431750479104,
+      "Monica Aldama": 0.7093283304118001,
+      "Jeannie Mai": 0.6010378243047301
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 11,
+    "week": 2,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.3085283728137318,
+      "Jesse Metcalfe": 0.8453565924588091,
+      "Chrishell Stause": 0.718187057505614,
+      "Skai Jackson": 0.8481309703957534,
+      "Justina Machado": 0.7294074418720752,
+      "Veron Davis": 0.49869709548981217,
+      "Johnny Weir": 0.8867146179001206,
+      "Nev Schulman": 0.7724676540087331,
+      "AJ McLean": 0.6659065921916884,
+      "Nelly": 0.5106070412827977,
+      "Kaitlyn Bristowe": 0.826220935932651,
+      "Carole Baskin": 0.22678629325771596,
+      "Monica Aldama": 0.6510778234814354,
+      "Jeannie Mai": 0.6937940031254408
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 12,
+    "week": 2,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.15516280261249377,
+      "Jesse Metcalfe": 0.8392107201720469,
+      "Chrishell Stause": 0.6933119582464491,
+      "Skai Jackson": 0.7375743116543024,
+      "Justina Machado": 0.7702171040771549,
+      "Veron Davis": 0.45675253523163556,
+      "Johnny Weir": 0.9202139107249364,
+      "Nev Schulman": 0.8181261779265165,
+      "AJ McLean": 0.6402115479818958,
+      "Nelly": 0.5489019814842303,
+      "Kaitlyn Bristowe": 0.83901665879545,
+      "Carole Baskin": 0.19885156115416083,
+      "Monica Aldama": 0.6814848782264507,
+      "Jeannie Mai": 0.6386848801130809
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 13,
+    "week": 2,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.14685820714370035,
+      "Jesse Metcalfe": 0.754340465429346,
+      "Chrishell Stause": 0.6750364996847866,
+      "Skai Jackson": 0.7858157130700629,
+      "Justina Machado": 0.8162231201612622,
+      "Veron Davis": 0.4454985993186965,
+      "Johnny Weir": 0.8813015573234048,
+      "Nev Schulman": 0.7437955266226708,
+      "AJ McLean": 0.5779079148384012,
+      "Nelly": 0.5814443881496588,
+      "Kaitlyn Bristowe": 0.8583078380271476,
+      "Carole Baskin": 0.18273910883504396,
+      "Monica Aldama": 0.6648294034979628,
+      "Jeannie Mai": 0.597071849317598
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 14,
+    "week": 2,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.6506950317488261,
+    "ema_error": 0.1775817063387691,
+    "prices": {
+      "Anne Heche": 0.1025848828330286,
+      "Jesse Metcalfe": 0.7671442694861506,
+      "Chrishell Stause": 0.661885771204779,
+      "Skai Jackson": 0.7808826545932416,
+      "Justina Machado": 0.7867585283765458,
+      "Veron Davis": 0.4234971737977493,
+      "Johnny Weir": 0.9,
+      "Nev Schulman": 0.7536012399292142,
+      "AJ McLean": 0.5999302183070979,
+      "Nelly": 0.5399777700372017,
+      "Kaitlyn Bristowe": 0.8222737476787151,
+      "Carole Baskin": 0.1,
+      "Monica Aldama": 0.656082193380506,
+      "Jeannie Mai": 0.5819063732731331
+    },
+    "eliminated_today": [
+      "Carole Baskin"
+    ]
+  },
+  {
+    "day_global": 15,
+    "week": 3,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.09184136047722744,
+      "Jesse Metcalfe": 0.7479836495608277,
+      "Chrishell Stause": 0.6846346873509764,
+      "Skai Jackson": 0.7746136718528275,
+      "Justina Machado": 0.7930928998562954,
+      "Veron Davis": 0.44003718480189574,
+      "Johnny Weir": 0.8658037093642348,
+      "Nev Schulman": 0.7434195225888235,
+      "AJ McLean": 0.5992171346659042,
+      "Nelly": 0.572739652449269,
+      "Kaitlyn Bristowe": 0.8472819698232252,
+      "Monica Aldama": 0.6670169626863985,
+      "Jeannie Mai": 0.5584668455907094
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 16,
+    "week": 3,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.04584055735362808,
+      "Jesse Metcalfe": 0.7173220279476772,
+      "Chrishell Stause": 0.6555040176251948,
+      "Skai Jackson": 0.7957713635146729,
+      "Justina Machado": 0.8127212351146028,
+      "Veron Davis": 0.4006714520425159,
+      "Johnny Weir": 0.8574731452575765,
+      "Nev Schulman": 0.7742269348882295,
+      "AJ McLean": 0.6725929797510581,
+      "Nelly": 0.5514131906562777,
+      "Kaitlyn Bristowe": 0.8703319545928472,
+      "Monica Aldama": 0.57953739700504,
+      "Jeannie Mai": 0.5904285127664243
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 17,
+    "week": 3,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.02928864103930634,
+      "Jesse Metcalfe": 0.7722130105351492,
+      "Chrishell Stause": 0.5703396723886482,
+      "Skai Jackson": 0.7883590505847917,
+      "Justina Machado": 0.822314244112952,
+      "Veron Davis": 0.43298699086141396,
+      "Johnny Weir": 0.8399048718171163,
+      "Nev Schulman": 0.7460232389236081,
+      "AJ McLean": 0.5682181583197171,
+      "Nelly": 0.5432807229589599,
+      "Kaitlyn Bristowe": 0.8424740180816788,
+      "Monica Aldama": 0.5683905623406265,
+      "Jeannie Mai": 0.45620973416084687
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 18,
+    "week": 3,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.04851236497617672,
+      "Jesse Metcalfe": 0.6922988175769692,
+      "Chrishell Stause": 0.6570431916599284,
+      "Skai Jackson": 0.7235680403077707,
+      "Justina Machado": 0.8341479684478879,
+      "Veron Davis": 0.4297040706787511,
+      "Johnny Weir": 0.8039363197587672,
+      "Nev Schulman": 0.6769465353615739,
+      "AJ McLean": 0.6864654292133735,
+      "Nelly": 0.6524948862153889,
+      "Kaitlyn Bristowe": 0.7612623518356616,
+      "Monica Aldama": 0.5703461855568447,
+      "Jeannie Mai": 0.5451737812008367
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 19,
+    "week": 3,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.10506609963247708,
+      "Jesse Metcalfe": 0.650084219815116,
+      "Chrishell Stause": 0.5703620599428365,
+      "Skai Jackson": 0.7919921085168248,
+      "Justina Machado": 0.8772072581724298,
+      "Veron Davis": 0.4747706567308339,
+      "Johnny Weir": 0.729667836969236,
+      "Nev Schulman": 0.7615126571640706,
+      "AJ McLean": 0.7021631033708016,
+      "Nelly": 0.6856108727418813,
+      "Kaitlyn Bristowe": 0.7607914289903632,
+      "Monica Aldama": 0.5466576361080464,
+      "Jeannie Mai": 0.5396127700327407
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 20,
+    "week": 3,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.10717020912853287,
+      "Jesse Metcalfe": 0.6183479166037557,
+      "Chrishell Stause": 0.5885470525726452,
+      "Skai Jackson": 0.7698705395011614,
+      "Justina Machado": 0.8522400982248874,
+      "Veron Davis": 0.41073417290323877,
+      "Johnny Weir": 0.7400872489382505,
+      "Nev Schulman": 0.7301917924824933,
+      "AJ McLean": 0.7219636567472845,
+      "Nelly": 0.6732631396053761,
+      "Kaitlyn Bristowe": 0.8160358050845632,
+      "Monica Aldama": 0.5706897810667434,
+      "Jeannie Mai": 0.5261813591209052
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 21,
+    "week": 3,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.65621137301658,
+    "ema_error": 0.1635024753807034,
+    "prices": {
+      "Anne Heche": 0.1,
+      "Jesse Metcalfe": 0.599199431014883,
+      "Chrishell Stause": 0.6105945727796872,
+      "Skai Jackson": 0.7861120987929955,
+      "Justina Machado": 0.9,
+      "Veron Davis": 0.4164208956158706,
+      "Johnny Weir": 0.7343722846862466,
+      "Nev Schulman": 0.7671052773978175,
+      "AJ McLean": 0.7278681345822754,
+      "Nelly": 0.7050866248059381,
+      "Kaitlyn Bristowe": 0.7714650500281681,
+      "Monica Aldama": 0.5691669228134504,
+      "Jeannie Mai": 0.5120989912463492
+    },
+    "eliminated_today": [
+      "Anne Heche"
+    ]
+  },
+  {
+    "day_global": 22,
+    "week": 4,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.5734951681469592,
+      "Chrishell Stause": 0.5812935345959592,
+      "Skai Jackson": 0.7768711158714894,
+      "Justina Machado": 0.9136939535695718,
+      "Veron Davis": 0.3643408564167666,
+      "Johnny Weir": 0.7195276395124683,
+      "Nev Schulman": 0.7959747770015491,
+      "AJ McLean": 0.7586654566633159,
+      "Nelly": 0.7130783374641488,
+      "Kaitlyn Bristowe": 0.7787567286609409,
+      "Monica Aldama": 0.5670094603257169,
+      "Jeannie Mai": 0.47594463721676045
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 23,
+    "week": 4,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.4725061933148515,
+      "Chrishell Stause": 0.5269968056452191,
+      "Skai Jackson": 0.7998284678955988,
+      "Justina Machado": 0.9191105914541726,
+      "Veron Davis": 0.22202527020034754,
+      "Johnny Weir": 0.7702595574630254,
+      "Nev Schulman": 0.7474455307356476,
+      "AJ McLean": 0.7422021213481367,
+      "Nelly": 0.7540582308515182,
+      "Kaitlyn Bristowe": 0.7702794964546607,
+      "Monica Aldama": 0.5470444640767922,
+      "Jeannie Mai": 0.4270664211106772
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 24,
+    "week": 4,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.435735794537308,
+      "Chrishell Stause": 0.6311129384640065,
+      "Skai Jackson": 0.816587616934889,
+      "Justina Machado": 0.891152775390612,
+      "Veron Davis": 0.3393029017137915,
+      "Johnny Weir": 0.7460461374543276,
+      "Nev Schulman": 0.6515516686402281,
+      "AJ McLean": 0.6848807077144548,
+      "Nelly": 0.7540599177512065,
+      "Kaitlyn Bristowe": 0.7029190821152864,
+      "Monica Aldama": 0.48196497222350676,
+      "Jeannie Mai": 0.442064548444268
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 25,
+    "week": 4,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.34956165261947814,
+      "Chrishell Stause": 0.591505617913849,
+      "Skai Jackson": 0.8132153505564479,
+      "Justina Machado": 0.9098931300536353,
+      "Veron Davis": 0.23926642241165064,
+      "Johnny Weir": 0.6846634046459456,
+      "Nev Schulman": 0.7771507978111689,
+      "AJ McLean": 0.7757091164853596,
+      "Nelly": 0.7266598681731837,
+      "Kaitlyn Bristowe": 0.6992050283028448,
+      "Monica Aldama": 0.43852969809709613,
+      "Jeannie Mai": 0.4197387136471257
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 26,
+    "week": 4,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.27003442187989335,
+      "Chrishell Stause": 0.6013967097555881,
+      "Skai Jackson": 0.8417838303472924,
+      "Justina Machado": 0.934790133238605,
+      "Veron Davis": 0.16811316624629258,
+      "Johnny Weir": 0.8056220627081487,
+      "Nev Schulman": 0.694401287681265,
+      "AJ McLean": 0.8114167992412872,
+      "Nelly": 0.6652384316183524,
+      "Kaitlyn Bristowe": 0.7286460136072374,
+      "Monica Aldama": 0.39155121665089715,
+      "Jeannie Mai": 0.5476956776291599
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 27,
+    "week": 4,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.2204383849384187,
+      "Chrishell Stause": 0.5807628656394185,
+      "Skai Jackson": 0.8448928072979937,
+      "Justina Machado": 0.9239262940030804,
+      "Veron Davis": 0.1866333392093708,
+      "Johnny Weir": 0.7331570207545811,
+      "Nev Schulman": 0.7583275806219225,
+      "AJ McLean": 0.800944789932359,
+      "Nelly": 0.7149816171781052,
+      "Kaitlyn Bristowe": 0.7453521788329694,
+      "Monica Aldama": 0.38466042204374973,
+      "Jeannie Mai": 0.4406086176420483
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 28,
+    "week": 4,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.6589118680927206,
+    "ema_error": 0.1994873920942709,
+    "prices": {
+      "Jesse Metcalfe": 0.1637192393882669,
+      "Chrishell Stause": 0.551601566822802,
+      "Skai Jackson": 0.821015223047298,
+      "Justina Machado": 0.9,
+      "Veron Davis": 0.1,
+      "Johnny Weir": 0.7558788915876672,
+      "Nev Schulman": 0.759164258137481,
+      "AJ McLean": 0.7768582315484183,
+      "Nelly": 0.7150619722138617,
+      "Kaitlyn Bristowe": 0.7165233346652607,
+      "Monica Aldama": 0.3452537293334216,
+      "Jeannie Mai": 0.4192997906792527
+    },
+    "eliminated_today": [
+      "Jesse Metcalfe"
+    ]
+  },
+  {
+    "day_global": 29,
+    "week": 5,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.5594461965491547,
+      "Skai Jackson": 0.7837793180435131,
+      "Justina Machado": 0.9005602426075604,
+      "Veron Davis": 0.11981426635334091,
+      "Johnny Weir": 0.7626091477482587,
+      "Nev Schulman": 0.7499193037079827,
+      "AJ McLean": 0.7470805807498206,
+      "Nelly": 0.7070213223436547,
+      "Kaitlyn Bristowe": 0.7276110799435404,
+      "Monica Aldama": 0.33330567406188905,
+      "Jeannie Mai": 0.4108538775795532
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 30,
+    "week": 5,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.5442895626157634,
+      "Skai Jackson": 0.8102613161382832,
+      "Justina Machado": 0.9212334461141377,
+      "Veron Davis": 0.09417013362985725,
+      "Johnny Weir": 0.7085882611201344,
+      "Nev Schulman": 0.7614522507470384,
+      "AJ McLean": 0.7701618845900383,
+      "Nelly": 0.7438449105202148,
+      "Kaitlyn Bristowe": 0.7119840547706034,
+      "Monica Aldama": 0.30063862222887855,
+      "Jeannie Mai": 0.4464253907068416
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 31,
+    "week": 5,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.52213192364609,
+      "Skai Jackson": 0.8620079594379242,
+      "Justina Machado": 0.8947429493323017,
+      "Veron Davis": 0.15157804466678385,
+      "Johnny Weir": 0.704370148322934,
+      "Nev Schulman": 0.7322612359149836,
+      "AJ McLean": 0.6815195437837706,
+      "Nelly": 0.8103928908223041,
+      "Kaitlyn Bristowe": 0.6492958962248853,
+      "Monica Aldama": 0.30626625331349955,
+      "Jeannie Mai": 0.3939841872498179
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 32,
+    "week": 5,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.590373313498792,
+      "Skai Jackson": 0.7697264118502459,
+      "Justina Machado": 0.7841192383241841,
+      "Veron Davis": 0.08704750055425639,
+      "Johnny Weir": 0.7322644329647475,
+      "Nev Schulman": 0.7485652744066564,
+      "AJ McLean": 0.7542984697748344,
+      "Nelly": 0.705021110691615,
+      "Kaitlyn Bristowe": 0.7338158568425909,
+      "Monica Aldama": 0.3227489582003933,
+      "Jeannie Mai": 0.35201641050849525
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 33,
+    "week": 5,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.5301388928662633,
+      "Skai Jackson": 0.7517174301588548,
+      "Justina Machado": 0.9073584627687807,
+      "Veron Davis": 0.10110822905230908,
+      "Johnny Weir": 0.6732862186486241,
+      "Nev Schulman": 0.7682442744471706,
+      "AJ McLean": 0.6853492146711982,
+      "Nelly": 0.8014065125697585,
+      "Kaitlyn Bristowe": 0.7612308980164008,
+      "Monica Aldama": 0.42910562649690076,
+      "Jeannie Mai": 0.37636872646257025
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 34,
+    "week": 5,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.5176145585364842,
+      "Skai Jackson": 0.8107684734917006,
+      "Justina Machado": 0.9067793632645901,
+      "Veron Davis": 0.08970607716875116,
+      "Johnny Weir": 0.6492418192420886,
+      "Nev Schulman": 0.7724560036740874,
+      "AJ McLean": 0.7430580640305801,
+      "Nelly": 0.7813015814247013,
+      "Kaitlyn Bristowe": 0.7831707689552989,
+      "Monica Aldama": 0.33341770072093757,
+      "Jeannie Mai": 0.3380428601818143
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 35,
+    "week": 5,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.6688093465115748,
+    "ema_error": 0.1951937282747561,
+    "prices": {
+      "Chrishell Stause": 0.5345083698510992,
+      "Skai Jackson": 0.8050348379916058,
+      "Justina Machado": 0.9,
+      "Veron Davis": 0.1,
+      "Johnny Weir": 0.6555489977044677,
+      "Nev Schulman": 0.7864383889798489,
+      "AJ McLean": 0.7194007705513996,
+      "Nelly": 0.7865977123956692,
+      "Kaitlyn Bristowe": 0.7715193857917644,
+      "Monica Aldama": 0.324293859924,
+      "Jeannie Mai": 0.3552994031255369
+    },
+    "eliminated_today": [
+      "Veron Davis"
+    ]
+  },
+  {
+    "day_global": 36,
+    "week": 6,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.553579716707385,
+      "Skai Jackson": 0.7588483496293591,
+      "Justina Machado": 0.9327617297601073,
+      "Johnny Weir": 0.6372180198696281,
+      "Nev Schulman": 0.7788213842421946,
+      "AJ McLean": 0.6969315947625164,
+      "Nelly": 0.8273575784923289,
+      "Kaitlyn Bristowe": 0.8146145698347772,
+      "Monica Aldama": 0.31508504428735684,
+      "Jeannie Mai": 0.3442253665839698
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 37,
+    "week": 6,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.478759924688586,
+      "Skai Jackson": 0.7908084539395392,
+      "Justina Machado": 0.8782348366059564,
+      "Johnny Weir": 0.6601993225717108,
+      "Nev Schulman": 0.7874494833814004,
+      "AJ McLean": 0.6276188018621635,
+      "Nelly": 0.7830764527783444,
+      "Kaitlyn Bristowe": 0.8073848396180237,
+      "Monica Aldama": 0.217375977268691,
+      "Jeannie Mai": 0.2632950138945585
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 38,
+    "week": 6,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.5679831263142695,
+      "Skai Jackson": 0.7400398015505077,
+      "Justina Machado": 0.9312822320256117,
+      "Johnny Weir": 0.5833149463028602,
+      "Nev Schulman": 0.8122696784844039,
+      "AJ McLean": 0.6726984380029545,
+      "Nelly": 0.8418862889088272,
+      "Kaitlyn Bristowe": 0.8546752382741913,
+      "Monica Aldama": 0.23708985718020337,
+      "Jeannie Mai": 0.18934869117307035
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 39,
+    "week": 6,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.4057911571554704,
+      "Skai Jackson": 0.7923628623298282,
+      "Justina Machado": 0.9576369473774198,
+      "Johnny Weir": 0.5696010683384385,
+      "Nev Schulman": 0.7925045285150658,
+      "AJ McLean": 0.787309444491023,
+      "Nelly": 0.9317886586929736,
+      "Kaitlyn Bristowe": 0.7806428659125937,
+      "Monica Aldama": 0.16847939873489226,
+      "Jeannie Mai": 0.24865895654943093
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 40,
+    "week": 6,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.5057973082220226,
+      "Skai Jackson": 0.7997836636680515,
+      "Justina Machado": 0.9037977721414033,
+      "Johnny Weir": 0.6691362940029405,
+      "Nev Schulman": 0.7434307034935059,
+      "AJ McLean": 0.5661696500160347,
+      "Nelly": 0.8658153252767009,
+      "Kaitlyn Bristowe": 0.8886359674335906,
+      "Monica Aldama": 0.05313429570193101,
+      "Jeannie Mai": 0.16451092296360292
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 41,
+    "week": 6,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.4101311219907743,
+      "Skai Jackson": 0.8107449455534339,
+      "Justina Machado": 0.9063848183289536,
+      "Johnny Weir": 0.6587935437451365,
+      "Nev Schulman": 0.7751043585818503,
+      "AJ McLean": 0.5832763521328864,
+      "Nelly": 0.8612409941254011,
+      "Kaitlyn Bristowe": 0.8630215662152064,
+      "Monica Aldama": 0.15012903892188476,
+      "Jeannie Mai": 0.1449936613363261
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 42,
+    "week": 6,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.677848092166526,
+    "ema_error": 0.2208439001593387,
+    "prices": {
+      "Chrishell Stause": 0.3862274810007604,
+      "Skai Jackson": 0.7535416509963744,
+      "Justina Machado": 0.8860835932981449,
+      "Johnny Weir": 0.6433780244835882,
+      "Nev Schulman": 0.8007660652383423,
+      "AJ McLean": 0.593977027233594,
+      "Nelly": 0.8858590964209929,
+      "Kaitlyn Bristowe": 0.9,
+      "Monica Aldama": 0.1,
+      "Jeannie Mai": 0.1009687734497898
+    },
+    "eliminated_today": [
+      "Jeannie Mai"
+    ]
+  },
+  {
+    "day_global": 43,
+    "week": 7,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.42083081403117417,
+      "Skai Jackson": 0.7497790862565866,
+      "Justina Machado": 0.8639632092802084,
+      "Johnny Weir": 0.675268188956452,
+      "Nev Schulman": 0.7750513772297392,
+      "AJ McLean": 0.5861310105222217,
+      "Nelly": 0.8989674461396586,
+      "Kaitlyn Bristowe": 0.8975848668822887,
+      "Monica Aldama": 0.11979209611164915
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 44,
+    "week": 7,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.4234738899202964,
+      "Skai Jackson": 0.7726530955076523,
+      "Justina Machado": 0.7740643003919985,
+      "Johnny Weir": 0.653435501556663,
+      "Nev Schulman": 0.8385118377599328,
+      "AJ McLean": 0.600340929119389,
+      "Nelly": 0.915315815630364,
+      "Kaitlyn Bristowe": 0.8593714227963303,
+      "Monica Aldama": 0.1715392902144336
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 45,
+    "week": 7,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.3026615093075619,
+      "Skai Jackson": 0.7446321572536186,
+      "Justina Machado": 0.8833969129568623,
+      "Johnny Weir": 0.5804009103935666,
+      "Nev Schulman": 0.8171175574183552,
+      "AJ McLean": 0.5650472100022773,
+      "Nelly": 0.8702116471205003,
+      "Kaitlyn Bristowe": 0.8638813464531555,
+      "Monica Aldama": 0.03913597227715113
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 46,
+    "week": 7,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.2808791493259691,
+      "Skai Jackson": 0.6922835438941762,
+      "Justina Machado": 0.8052001067740415,
+      "Johnny Weir": 0.6322879138155502,
+      "Nev Schulman": 0.7919981592634052,
+      "AJ McLean": 0.5934858038137129,
+      "Nelly": 0.9295838267593801,
+      "Kaitlyn Bristowe": 0.8943332973468223,
+      "Monica Aldama": 0.09660505524850473
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 47,
+    "week": 7,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.34783012053363976,
+      "Skai Jackson": 0.729552443128674,
+      "Justina Machado": 0.8349707200088691,
+      "Johnny Weir": 0.642828051831648,
+      "Nev Schulman": 0.7607555806098382,
+      "AJ McLean": 0.5339251988514129,
+      "Nelly": 0.8527144397342852,
+      "Kaitlyn Bristowe": 0.8651728219513916,
+      "Monica Aldama": 0.05317619058174251
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 48,
+    "week": 7,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.3415459320374782,
+      "Skai Jackson": 0.7122160777533633,
+      "Justina Machado": 0.8177961041511664,
+      "Johnny Weir": 0.6195220482511458,
+      "Nev Schulman": 0.7634410157542316,
+      "AJ McLean": 0.5267415609698324,
+      "Nelly": 0.9264256607340456,
+      "Kaitlyn Bristowe": 0.8458696097217006,
+      "Monica Aldama": 0.07050154525242587
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 49,
+    "week": 7,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.6920168721983937,
+    "ema_error": 0.1977912457623191,
+    "prices": {
+      "Chrishell Stause": 0.3493181815978383,
+      "Skai Jackson": 0.7034240634146876,
+      "Justina Machado": 0.8113572037532307,
+      "Johnny Weir": 0.6327477275897028,
+      "Nev Schulman": 0.7857640843110343,
+      "AJ McLean": 0.5468478690107663,
+      "Nelly": 0.9,
+      "Kaitlyn Bristowe": 0.8933485878177269,
+      "Monica Aldama": 0.1
+    },
+    "eliminated_today": [
+      "Monica Aldama"
+    ]
+  },
+  {
+    "day_global": 50,
+    "week": 8,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.30134814130435067,
+      "Skai Jackson": 0.707834903309853,
+      "Justina Machado": 0.8098596148139587,
+      "Johnny Weir": 0.6118003456192878,
+      "Nev Schulman": 0.7498813409959646,
+      "AJ McLean": 0.48199724528285975,
+      "Nelly": 0.9092606019156184,
+      "Kaitlyn Bristowe": 0.8379663105546308
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 51,
+    "week": 8,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.2808413684210201,
+      "Skai Jackson": 0.6938566942785984,
+      "Justina Machado": 0.7346424947543501,
+      "Johnny Weir": 0.6162536632351037,
+      "Nev Schulman": 0.7680712512757845,
+      "AJ McLean": 0.4634781846178495,
+      "Nelly": 0.890660416803964,
+      "Kaitlyn Bristowe": 0.8233363928161624
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 52,
+    "week": 8,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.25028124625421333,
+      "Skai Jackson": 0.6859459532078649,
+      "Justina Machado": 0.7760151472310934,
+      "Johnny Weir": 0.5503664810917821,
+      "Nev Schulman": 0.8021584417472416,
+      "AJ McLean": 0.4013899996935268,
+      "Nelly": 0.9075239540502562,
+      "Kaitlyn Bristowe": 0.8749814830407434
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 53,
+    "week": 8,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.2591277351388812,
+      "Skai Jackson": 0.6140116286491561,
+      "Justina Machado": 0.7836231014344838,
+      "Johnny Weir": 0.48400893573825166,
+      "Nev Schulman": 0.7611209521911106,
+      "AJ McLean": 0.5293005120114206,
+      "Nelly": 0.8750867853972728,
+      "Kaitlyn Bristowe": 0.8842131597591694
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 54,
+    "week": 8,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.21424517777899987,
+      "Skai Jackson": 0.6491355331381263,
+      "Justina Machado": 0.7070319094452573,
+      "Johnny Weir": 0.5374364155103167,
+      "Nev Schulman": 0.733567686249553,
+      "AJ McLean": 0.3460170289672173,
+      "Nelly": 0.9750810661162624,
+      "Kaitlyn Bristowe": 0.8743458076218148
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 55,
+    "week": 8,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.11301672823726294,
+      "Skai Jackson": 0.6171629052447303,
+      "Justina Machado": 0.7741645707962694,
+      "Johnny Weir": 0.5280080139739267,
+      "Nev Schulman": 0.7378297707072476,
+      "AJ McLean": 0.39934763073187823,
+      "Nelly": 0.9123739794516887,
+      "Kaitlyn Bristowe": 0.8564466643424355
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 56,
+    "week": 8,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.7015751213508575,
+    "ema_error": 0.1845409928241947,
+    "prices": {
+      "Chrishell Stause": 0.1,
+      "Skai Jackson": 0.5718149957745019,
+      "Justina Machado": 0.7459759144532994,
+      "Johnny Weir": 0.5090666490400907,
+      "Nev Schulman": 0.7311856607818344,
+      "AJ McLean": 0.3709206822310957,
+      "Nelly": 0.9000000000000001,
+      "Kaitlyn Bristowe": 0.8483208093064112
+    },
+    "eliminated_today": [
+      "Chrishell Stause"
+    ]
+  },
+  {
+    "day_global": 57,
+    "week": 9,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.5706017021460031,
+      "Justina Machado": 0.7515149653960274,
+      "Johnny Weir": 0.497956800500625,
+      "Nev Schulman": 0.7123033389611677,
+      "AJ McLean": 0.3194576483525987,
+      "Nelly": 0.8977555749341073,
+      "Kaitlyn Bristowe": 0.8785617051257965
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 58,
+    "week": 9,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.5079770478338018,
+      "Justina Machado": 0.7166371692387475,
+      "Johnny Weir": 0.5051586616312722,
+      "Nev Schulman": 0.8067406824452477,
+      "AJ McLean": 0.2870479562472141,
+      "Nelly": 0.9091724043097349,
+      "Kaitlyn Bristowe": 0.8732480345014424
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 59,
+    "week": 9,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.4256094768073349,
+      "Justina Machado": 0.6428518023805543,
+      "Johnny Weir": 0.4016289816333737,
+      "Nev Schulman": 0.687000726448416,
+      "AJ McLean": 0.2640742684164111,
+      "Nelly": 0.9479835151149651,
+      "Kaitlyn Bristowe": 0.7945806236972575
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 60,
+    "week": 9,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.4911739288633323,
+      "Justina Machado": 0.7425587829400908,
+      "Johnny Weir": 0.4778884463269874,
+      "Nev Schulman": 0.7076786865191907,
+      "AJ McLean": 0.13767876269085022,
+      "Nelly": 0.9603189027962051,
+      "Kaitlyn Bristowe": 0.8306705768202339
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 61,
+    "week": 9,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.49776436744402586,
+      "Justina Machado": 0.7238744771350336,
+      "Johnny Weir": 0.3921967035817799,
+      "Nev Schulman": 0.754479932584089,
+      "AJ McLean": 0.14784801463308545,
+      "Nelly": 0.8519999797303051,
+      "Kaitlyn Bristowe": 0.8291896224551207
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 62,
+    "week": 9,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.42492050837607254,
+      "Justina Machado": 0.6566124204277765,
+      "Johnny Weir": 0.388433354202109,
+      "Nev Schulman": 0.7273274031672301,
+      "AJ McLean": 0.09091954294244813,
+      "Nelly": 0.8853021904153686,
+      "Kaitlyn Bristowe": 0.8199067181742814
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 63,
+    "week": 9,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.7084833199156965,
+    "ema_error": 0.1854703461382507,
+    "prices": {
+      "Skai Jackson": 0.3888003090095433,
+      "Justina Machado": 0.6794703133467755,
+      "Johnny Weir": 0.3541309359285738,
+      "Nev Schulman": 0.7114827360306406,
+      "AJ McLean": 0.1,
+      "Nelly": 0.9,
+      "Kaitlyn Bristowe": 0.8308613497809203
+    },
+    "eliminated_today": [
+      "AJ McLean"
+    ]
+  },
+  {
+    "day_global": 64,
+    "week": 10,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.3558017750315935,
+      "Justina Machado": 0.6814115003256705,
+      "Johnny Weir": 0.3171997231367941,
+      "Nev Schulman": 0.6948934659262282,
+      "Nelly": 0.9218086801203583,
+      "Kaitlyn Bristowe": 0.8212320737186077
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 65,
+    "week": 10,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.3513698346278761,
+      "Justina Machado": 0.5768783713770541,
+      "Johnny Weir": 0.30363688885674395,
+      "Nev Schulman": 0.68605009436622,
+      "Nelly": 0.915613159267225,
+      "Kaitlyn Bristowe": 0.7944135263080703
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 66,
+    "week": 10,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.2905694384181145,
+      "Justina Machado": 0.586797038013255,
+      "Johnny Weir": 0.26364595463072144,
+      "Nev Schulman": 0.5321101448999846,
+      "Nelly": 0.891231639636196,
+      "Kaitlyn Bristowe": 0.8717488082527576
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 67,
+    "week": 10,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.3206371464558567,
+      "Justina Machado": 0.5141722797100314,
+      "Johnny Weir": 0.12438156562105518,
+      "Nev Schulman": 0.7139490369464161,
+      "Nelly": 0.9150145775500524,
+      "Kaitlyn Bristowe": 0.8204903933776739
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 68,
+    "week": 10,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.15959832740645982,
+      "Justina Machado": 0.6404820185667194,
+      "Johnny Weir": 0.18277616780192968,
+      "Nev Schulman": 0.6810430854405167,
+      "Nelly": 0.9088879129291244,
+      "Kaitlyn Bristowe": 0.8366561809586357
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 69,
+    "week": 10,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.15881448842479337,
+      "Justina Machado": 0.5714981832433341,
+      "Johnny Weir": 0.14171406401272527,
+      "Nev Schulman": 0.6695635727940202,
+      "Nelly": 0.9215763673461503,
+      "Kaitlyn Bristowe": 0.8480889006320225
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 70,
+    "week": 10,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.7155773891433466,
+    "ema_error": 0.2159912585279702,
+    "prices": {
+      "Skai Jackson": 0.1189531306915711,
+      "Justina Machado": 0.5747609308145472,
+      "Johnny Weir": 0.1,
+      "Nev Schulman": 0.6691736445788209,
+      "Nelly": 0.9,
+      "Kaitlyn Bristowe": 0.7989665780480854
+    },
+    "eliminated_today": [
+      "Johnny Weir"
+    ]
+  },
+  {
+    "day_global": 71,
+    "week": 11,
+    "day_of_week": 1,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.4876574244984647,
+      "Nev Schulman": 0.6519435489158467,
+      "Nelly": 0.8924126250716318,
+      "Kaitlyn Bristowe": 0.7758315394467089
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 72,
+    "week": 11,
+    "day_of_week": 2,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.4425020226069531,
+      "Nev Schulman": 0.6450793799427883,
+      "Nelly": 0.8970515229673619,
+      "Kaitlyn Bristowe": 0.6744441935948106
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 73,
+    "week": 11,
+    "day_of_week": 3,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.4030535238378137,
+      "Nev Schulman": 0.5644436751940347,
+      "Nelly": 0.8570004436991331,
+      "Kaitlyn Bristowe": 0.7714333077976769
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 74,
+    "week": 11,
+    "day_of_week": 4,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.32830336899821344,
+      "Nev Schulman": 0.5337967159831203,
+      "Nelly": 0.9050538846776003,
+      "Kaitlyn Bristowe": 0.7023833970965905
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 75,
+    "week": 11,
+    "day_of_week": 5,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.2340731969275586,
+      "Nev Schulman": 0.4799736280714279,
+      "Nelly": 0.8647865487257496,
+      "Kaitlyn Bristowe": 0.7553820563738028
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 76,
+    "week": 11,
+    "day_of_week": 6,
+    "is_show_day": false,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.1493023590932867,
+      "Nev Schulman": 0.4348325055120317,
+      "Nelly": 0.8578179366987014,
+      "Kaitlyn Bristowe": 0.6907277586729443
+    },
+    "eliminated_today": []
+  },
+  {
+    "day_global": 77,
+    "week": 11,
+    "day_of_week": 7,
+    "is_show_day": true,
+    "w_t": 0.7287756408489406,
+    "ema_error": 0.1950909818081027,
+    "prices": {
+      "Skai Jackson": 0,
+      "Justina Machado": 0.1,
+      "Nev Schulman": 0.3799124477514057,
+      "Nelly": 0.9,
+      "Kaitlyn Bristowe": 0.6647312461998347
+    },
+    "eliminated_today": [
+      "Justina Machado"
+    ]
+  }
+]

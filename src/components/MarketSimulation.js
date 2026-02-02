@@ -1,154 +1,285 @@
-import React, { useState, useEffect } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { TrendingUp, TrendingDown, Users, Shield } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, ReferenceLine } from 'recharts';
+import { Play, Pause, FastForward, TrendingUp, TrendingDown, Lock, Unlock, AlertTriangle } from 'lucide-react';
+import marketData from '../data/marketData.json';
 
-const INITIAL_CONTESTANTS = [
-  { id: 1, name: 'Jerry Rice', role: 'Legend', price: 0.85, trend: 0.0, history: [0.85] },
-  { id: 2, name: 'Billy Ray', role: 'Viral Star', price: 0.92, trend: 0.0, history: [0.92] },
-  { id: 3, name: 'Stacy Keibler', role: 'Talent', price: 0.60, trend: 0.0, history: [0.60] },
-  { id: 4, name: 'Master P', role: 'Disruptor', price: 0.40, trend: 0.0, history: [0.40] },
+const COLORS = [
+  '#FF6B35', '#2ec4b6', '#e71d36', '#ff9f1c', 
+  '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51',
+  '#d62828', '#003049', '#fcbf49', '#eae2b7'
 ];
 
 export default function MarketSimulation() {
-  const [contestants, setContestants] = useState(INITIAL_CONTESTANTS);
-  const [week, setWeek] = useState(1);
-  const [userFunds, setUserFunds] = useState(1000);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [speed, setSpeed] = useState(500); // ms per day
+  const [userFunds, setUserFunds] = useState(2000);
   const [portfolio, setPortfolio] = useState({});
+  const [history, setHistory] = useState([]);
+  
+  const timerRef = useRef(null);
 
-  // Simulate market movement
-  const updatePrices = (id, direction) => {
-    setContestants(prev => prev.map(c => {
-      if (c.id !== id) return c;
-      
-      const change = direction === 'buy' ? 0.02 : -0.02;
-      let newPrice = Math.max(0.01, Math.min(0.99, c.price + change));
-      
-      // Add random noise
-      newPrice += (Math.random() - 0.5) * 0.005;
-      
-      return {
-        ...c,
-        price: newPrice,
-        history: [...c.history, newPrice]
-      };
-    }));
-  };
+  // Initial Setup
+  useEffect(() => {
+    // Reset to start
+    setHistory([formatDataPoint(marketData[0])]);
+  }, []);
 
-  const handleTrade = (id, direction) => {
-    const contestant = contestants.find(c => c.id === id);
-    if (!contestant) return;
-
-    if (direction === 'buy') {
-      if (userFunds < 10) return; // Scale cost
-      setUserFunds(f => f - 10);
-      setPortfolio(p => ({ ...p, [id]: (p[id] || 0) + 10 }));
-      updatePrices(id, 'buy');
+  // Timer Logic
+  useEffect(() => {
+    if (isPlaying) {
+      timerRef.current = setInterval(() => {
+        setCurrentIndex(prev => {
+          if (prev >= marketData.length - 1) {
+            setIsPlaying(false);
+            return prev;
+          }
+          return prev + 1;
+        });
+      }, speed);
     } else {
-      if (!portfolio[id] || portfolio[id] <= 0) return;
-      setUserFunds(f => f + 10);
-      setPortfolio(p => ({ ...p, [id]: p[id] - 10 }));
-      updatePrices(id, 'sell');
+      clearInterval(timerRef.current);
+    }
+    return () => clearInterval(timerRef.current);
+  }, [isPlaying, speed]);
+
+  // Update History on Index Change
+  useEffect(() => {
+    if (currentIndex > 0) {
+      setHistory(prev => {
+        // Avoid duplicates if re-rendering same index
+        if (prev.length > currentIndex) return prev;
+        return [...prev, formatDataPoint(marketData[currentIndex])];
+      });
+    }
+  }, [currentIndex]);
+
+  const currentDay = marketData[currentIndex];
+  // Calculate Market Open/Close status
+  // User Requirement: "Settings Saturday as show time, non-show time can be bought and sold freely"
+  // Saturday is day_of_week 6? Or 7? In data prep, I used d=7 as Show Day.
+  const isShowDay = currentDay.is_show_day; 
+  const isMarketOpen = !isShowDay;
+
+  function formatDataPoint(dayRecord) {
+    return {
+      name: `W${dayRecord.week}D${dayRecord.day_of_week}`,
+      ...dayRecord,
+      ...dayRecord.prices
+    };
+  }
+
+  const handleTrade = (contestant, action) => {
+    if (!isMarketOpen) return;
+    
+    const price = currentDay.prices[contestant];
+    if (!price) return;
+    
+    // Cost basis: 100 units
+    const cost = price * 100;
+    
+    if (action === 'buy') {
+      if (userFunds >= cost) {
+        setUserFunds(f => f - cost);
+        setPortfolio(p => ({
+          ...p,
+          [contestant]: (p[contestant] || 0) + 100
+        }));
+      }
+    } else {
+      if ((portfolio[contestant] || 0) >= 100) {
+        setUserFunds(f => f + cost);
+        setPortfolio(p => ({
+          ...p,
+          [contestant]: p[contestant] - 100
+        }));
+      }
     }
   };
 
-  const nextWeek = () => {
-    setWeek(w => w + 1);
-    // Simulate random market fluctuations for everyone
-    setContestants(prev => prev.map(c => {
-      const randomMove = (Math.random() - 0.5) * 0.05;
-      const newPrice = Math.max(0.01, Math.min(0.99, c.price + randomMove));
-      return {
-        ...c,
-        price: newPrice,
-        history: [...c.history, newPrice]
-      };
-    }));
-  };
+  // Get active contestants (who have a price > 0)
+  const activeContestants = Object.keys(currentDay.prices).filter(c => currentDay.prices[c] > 0);
 
   return (
     <div className="container margin-vert--lg">
-      <div className="row">
-        <div className="col col--12 text--center margin-bottom--md">
-          <h1>APSM-B3R Live Market Demo</h1>
-          <p>Trade shares in contestants. Higher Price = Higher Survival Probability.</p>
+      {/* Header / Info Bar */}
+      <div className="row margin-bottom--md">
+        <div className="col col--12">
+          <div className="card padding--md shadow--lw" style={{background: 'var(--ifm-color-white)', borderRadius: '8px', borderLeft: isMarketOpen ? '5px solid #2ecc71' : '5px solid #e74c3c'}}>
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+              <div>
+                <h2 style={{margin: 0, color: 'var(--ifm-color-emphasis-900)'}}>
+                  Week {currentDay.week} <span style={{fontWeight: 'normal', opacity: 0.7}}>Day {currentDay.day_of_week}</span>
+                </h2>
+                <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px'}}>
+                  {isMarketOpen ? <Unlock size={16} color="#2ecc71"/> : <Lock size={16} color="#e74c3c"/>}
+                  <strong style={{color: isMarketOpen ? '#2ecc71' : '#e74c3c'}}>
+                    {isMarketOpen ? 'MARKET OPEN' : 'SHOW AIRING - TRADING LOCKED'}
+                  </strong>
+                </div>
+              </div>
+              
+              <div style={{textAlign: 'right'}}>
+                <div className="button-group">
+                  <button className="button button--secondary button--sm" onClick={() => setIsPlaying(!isPlaying)}>
+                    {isPlaying ? <Pause size={16} /> : <Play size={16} />} 
+                    {isPlaying ? ' Pause' : ' Play System'}
+                  </button>
+                  <button className="button button--secondary button--sm" onClick={() => setSpeed(s => s === 100 ? 500 : 100)}>
+                    <FastForward size={16} /> {speed === 100 ? '1x' : '5x'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="row">
-        {/* Market Status Board */}
-        <div className="col col--4">
-          <div className="card padding--md" style={{background: 'var(--ifm-color-white)'}}>
-            <h3><Users size={20} /> My Portfolio</h3>
-            <div className="margin-bottom--md">
-              <h2>${userFunds.toFixed(2)}</h2>
-              <small>Available Funds</small>
-            </div>
-            <hr />
-            {Object.keys(portfolio).length === 0 && <p>No active investments.</p>}
-            {Object.entries(portfolio).map(([id, amount]) => {
-                const c = contestants.find(x => x.id === parseInt(id));
-                return c && amount > 0 ? (
-                    <div key={id} style={{display:'flex', justifyContent:'space-between'}}>
-                        <span>{c.name}</span>
-                        <strong>{amount} shares</strong>
-                    </div>
-                ) : null;
-            })}
-            
-            <button className="button button--secondary button--block margin-top--lg" onClick={nextWeek}>
-              Advance to Week {week + 1}
-            </button>
+        {/* Left Column: Big Board & Stats */}
+        <div className="col col--8">
+          
+          {/* Main Price Chart */}
+          <div className="card margin-bottom--md">
+             <div className="card__header">
+               <h3>Market Prices (P_close)</h3>
+             </div>
+             <div className="card__body" style={{height: '400px', width: '100%'}}>
+               <ResponsiveContainer width="100%" height="100%">
+                 <LineChart data={history}>
+                   <CartesianGrid strokeDasharray="3 3" vertical={false} opacity={0.3} />
+                   <XAxis dataKey="name" hide={true} />
+                   <YAxis domain={[0, 1]} />
+                   <Tooltip 
+                      contentStyle={{backgroundColor: '#fff', borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}
+                   />
+                   {activeContestants.map((c, i) => (
+                     <Line 
+                        key={c} 
+                        type="monotone" 
+                        dataKey={c} 
+                        stroke={COLORS[i % COLORS.length]} 
+                        step="monotone" // Smooth curve
+                        dot={false}
+                        strokeWidth={2}
+                        isAnimationActive={false}
+                     />
+                   ))}
+                   {currentDay.is_show_day && (
+                      <ReferenceLine x={`W${currentDay.week}D${currentDay.day_of_week}`} stroke="red" label="Show" />
+                   )}
+                 </LineChart>
+               </ResponsiveContainer>
+             </div>
           </div>
+
+          {/* System Health (Big Board EMA) */}
+          <div className="row">
+             <div className="col col--12">
+               <div className="card margin-bottom--md" style={{background: '#f8f9fa'}}>
+                 <div className="card__header" style={{display:'flex', justifyContent:'space-between'}}>
+                   <h3>System Diagnostic (Big Board)</h3>
+                   <span className="badge badge--warning">EMA Error Tracking</span>
+                 </div>
+                 <div className="card__body">
+                   <div style={{display: 'flex', gap: '2rem', marginBottom: '1rem'}}>
+                      <div>
+                        <small>Current Adaptive Weight (w_t)</small>
+                        <h2 style={{color: '#d35400'}}>{currentDay.w_t.toFixed(4)}</h2>
+                      </div>
+                      <div>
+                        <small>System EMA Error</small>
+                        <h2 style={{color: currentDay.ema_error > 0.15 ? '#c0392b' : '#27ae60'}}>
+                          {currentDay.ema_error.toFixed(4)}
+                        </h2>
+                      </div>
+                   </div>
+                   <div style={{height: '150px', width: '100%'}}>
+                     <ResponsiveContainer width="100%" height="100%">
+                       <AreaChart data={history}>
+                         <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                         <XAxis dataKey="name" hide={true} />
+                         <YAxis domain={[0, 'auto']} />
+                         <Tooltip />
+                         <Area type="monotone" dataKey="ema_error" stroke="#8884d8" fill="#8884d8" name="EMA Error" isAnimationActive={false}/>
+                         <Line type="step" dataKey="w_t" stroke="#d35400" strokeWidth={2} name="Weight (w_t)" dot={false} isAnimationActive={false}/>
+                       </AreaChart>
+                     </ResponsiveContainer>
+                   </div>
+                 </div>
+               </div>
+             </div>
+          </div>
+
         </div>
 
-        {/* Contestant Cards */}
-        <div className="col col--8">
-          <div className="row">
-            {contestants.map((c) => (
-              <div key={c.id} className="col col--6 margin-bottom--md">
-                <div className="card">
-                  <div className="card__header" style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
-                    <h3>{c.name}</h3>
-                    <span className="badge badge--primary">{c.role}</span>
-                  </div>
-                  <div className="card__body">
-                    <div style={{display:'flex', alignItems:'baseline', gap:'10px'}}>
-                      <h1 style={{color: 'var(--ifm-color-primary)', margin:0}}>
-                        ${c.price.toFixed(2)}
-                      </h1>
-                      <small style={{color: c.price > c.history[c.history.length-2] ? 'green' : 'red'}}>
-                        {((c.price - (c.history[c.history.length-2] || c.price))*100).toFixed(1)}%
-                      </small>
-                    </div>
-                    
-                    <div style={{height: '200px', width: '100%', marginTop: '10px', minHeight: '200px'}}>
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={c.history.map((h, i) => ({week: i, price: h}))}>
-                          <Line type="monotone" dataKey="price" stroke="var(--ifm-color-primary)" strokeWidth={2} dot={false} />
-                        </LineChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </div>
-                  <div className="card__footer">
-                    <div className="button-group button-group--block">
-                      <button 
-                        className="button button--success"
-                        onClick={() => handleTrade(c.id, 'buy')}>
-                        <TrendingUp size={16} /> Buy
-                      </button>
-                      <button 
-                        className="button button--danger"
-                        onClick={() => handleTrade(c.id, 'sell')}>
-                        <TrendingDown size={16} /> Sell
-                      </button>
-                    </div>
-                  </div>
-                </div>
+        {/* Right Column: Trading Desk */}
+        <div className="col col--4">
+           {/* User Wallet */}
+           <div className="card margin-bottom--md">
+             <div className="card__body text--center">
+                <small>My Coin Balance</small>
+                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '2.5rem', margin: '0.5rem 0'}}>
+                   ₵ {userFunds.toFixed(0)}
+                </h1>
+                <p style={{fontSize: '0.9rem', color: '#666'}}>
+                   Portfolio Value: ₵ {Object.entries(portfolio).reduce((acc, [name, amt]) => {
+                      const p = currentDay.prices[name] || 0;
+                      return acc + (p * amt);
+                   }, 0).toFixed(0)}
+                </p>
+             </div>
+           </div>
+
+           {/* Market List */}
+           <div className="card" style={{height: '600px', overflowY: 'auto'}}>
+              <div className="card__header">
+                <h3>Active Markets</h3>
               </div>
-            ))}
-          </div>
+              <div className="card__body">
+                 {activeContestants.sort((a,b) => currentDay.prices[b] - currentDay.prices[a]).map((c, i) => (
+                    <div key={c} style={{
+                        padding: '10px', 
+                        borderBottom: '1px solid #eee', 
+                        background: (portfolio[c] > 0) ? '#fff8e1' : 'transparent'
+                    }}>
+                       <div style={{display:'flex', justifyContent: 'space-between', marginBottom: '5px'}}>
+                          <strong>{c}</strong>
+                          <span style={{color: 'var(--ifm-color-primary)', fontWeight: 'bold'}}>
+                            {currentDay.prices[c].toFixed(3)}
+                          </span>
+                       </div>
+                       
+                       <div style={{display:'grid', gridTemplateColumns: '1fr 1fr', gap: '5px'}}>
+                           <button 
+                             className="button button--success button--sm button--outline"
+                             disabled={!isMarketOpen}
+                             onClick={() => handleTrade(c, 'buy')}>
+                             Buy
+                           </button>
+                           <button 
+                             className="button button--danger button--sm button--outline"
+                             disabled={!isMarketOpen || (portfolio[c]||0) <= 0}
+                             onClick={() => handleTrade(c, 'sell')}>
+                             Sell {(portfolio[c] && portfolio[c]>0) ? `(${portfolio[c]})` : ''}
+                           </button>
+                       </div>
+                    </div>
+                 ))}
+                 
+                 {currentDay.eliminated_today && currentDay.eliminated_today.length > 0 && (
+                     <div className="alert alert--danger margin-top--md">
+                        <strong>Eliminated Today:</strong>
+                        <ul style={{margin:0, paddingLeft:'1rem'}}>
+                           {currentDay.eliminated_today.map(e => <li key={e}>{e}</li>)}
+                        </ul>
+                     </div>
+                 )}
+              </div>
+           </div>
         </div>
       </div>
     </div>
   );
 }
+
