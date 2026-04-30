@@ -1,0 +1,156 @@
+<%
+	const momentsConfig = page.moments_config || theme.moments || {};
+	const timeline = [...kr_moments_entries()];
+	const walineEnabled = Boolean(
+		momentsConfig.comments &&
+			momentsConfig.comments.enable &&
+			momentsConfig.comments.provider === "waline" &&
+			momentsConfig.comments.waline &&
+			momentsConfig.comments.waline.server_url,
+	);
+	const momentsCover = page.cover || momentsConfig.page?.cover;
+	const galleryColumns = momentsConfig.gallery?.columns || 3;
+	const galleryGap = momentsConfig.gallery?.gap ?? 8;
+	const formatMomentId = (raw, idx) =>
+		(raw || `moment-${idx}`)
+			.toString()
+			.trim()
+			.toLowerCase()
+			.replace(/[^a-z0-9_-]+/g, "-");
+%>
+
+<article class="kratos-hentry kratos-page-inner clearfix kr-moments-page">
+	<% if (config.debug) { %>
+		<% const debugFolderPath = require('path').join(hexo.source_dir, (theme.moments.storage && theme.moments.storage.folder) || '_moments'); %>
+		<pre class="kr-debug">
+	source_dir: <%= hexo.source_dir %>
+	moments folder: <%= debugFolderPath %>
+	entries: <%= kr_moments_entries().length %>
+		</pre>
+	<% } %>
+	<header
+		class="kratos-page-header kr-moments-header<%- momentsCover ? ' has-cover' : '' %>"
+		<% if (momentsCover) { %>style="--moments-cover-image: url('<%- url_for(momentsCover) %>');"<% } %>
+	>
+		<h1 class="kratos-page-title text-center" itemprop="name headline">
+			<%- page.title || __(page.title_i18n || 'title.moments') %>
+		</h1>
+		<% if (page.subtitle || momentsConfig.page?.subtitle) { %>
+			<p class="kr-moments-subtitle">
+				<%- page.subtitle || momentsConfig.page?.subtitle %>
+			</p>
+		<% } %>
+		<% if (page.description || momentsConfig.page?.description) { %>
+			<p class="kr-moments-description">
+				<%- page.description || momentsConfig.page?.description %>
+			</p>
+		<% } %>
+		<% if (timeline.length) { %>
+			<p class="kr-moments-count">
+				<i class="fa fa-bolt" aria-hidden="true"></i>
+				<span><%- __('moments.count', timeline.length) %></span>
+			</p>
+		<% } %>
+	</header>
+
+	<div class="kratos-page-content kr-page kr-moments-content<%- timeline.length ? ' has-moments' : ' is-empty' %>" style="--moments-gallery-gap:<%- galleryGap %>px; --moments-gallery-columns:<%- galleryColumns %>">
+		<% if (!timeline.length) { %>
+			<div class="kr-moments-empty">
+				<i class="fa fa-inbox" aria-hidden="true"></i>
+				<p><%- __('moments.empty') %></p>
+			</div>
+		<% } %>
+
+		<% timeline.forEach((moment, index) => {
+				 const momentId = formatMomentId(moment.id, index);
+				 const commentContainerId = `waline-${momentId}`;
+		%>
+			<section
+				id="<%- momentId %>"
+				class="kr-moment<%- momentsConfig.allow_pin && moment.pinned ? ' is-pinned' : '' %>"
+				data-moment-id="<%- momentId %>"
+			>
+				<header class="kr-moment-header">
+					<div class="kr-moment-meta">
+						<span class="kr-moment-author"><%- moment.author || config.author %></span>
+						<% if (moment.date) { %>
+							<time datetime="<%- date_xml(moment.date) %>"><%- date(moment.date, 'YYYY-MM-DD HH:mm') %></time>
+						<% } %>
+					</div>
+					<% if (momentsConfig.allow_pin && moment.pinned) { %>
+						<span class="kr-moment-pin"><i class="fa fa-thumb-tack"></i> <%- __('moments.pinned') %></span>
+					<% } %>
+				</header>
+
+				<div class="kr-moment-body">
+					<% if (moment.text) { %>
+						<div class="kr-moment-text"><%- markdown(moment.text) %></div>
+					<% } %>
+
+					<% if (moment.images && moment.images.length) { %>
+						<div class="kr-moment-gallery">
+							<% moment.images.forEach((image) => {
+								const imageData = typeof image === "string" ? { url: image } : (image || {});
+								const imageSrc = imageData.url || imageData.src;
+								if (!imageSrc) { return; }
+								const imageAlt = imageData.alt || imageData.caption || "";
+							%>
+								<figure class="kr-moment-shot">
+									<img src="<%- imageSrc %>" alt="<%- imageAlt %>">
+								</figure>
+							<% }) %>
+						</div>
+					<% } %>
+
+					<% if (moment.links && moment.links.length) { %>
+						<div class="kr-moment-links">
+							<% moment.links.forEach((link) => {
+									 if (!link || !link.url) { return; }
+							%>
+								<a href="<%- link.url %>" target="_blank" rel="noopener" class="kr-moment-link">
+									<i class="fa fa-link"></i>
+									<span><%- link.label || link.url %></span>
+								</a>
+							<% }) %>
+						</div>
+					<% } %>
+
+					<% if (moment.tags && moment.tags.length) { %>
+						<ul class="kr-moment-tags">
+							<% moment.tags.forEach((tag) => { %>
+								<li>#<%- tag %></li>
+							<% }) %>
+						</ul>
+					<% } %>
+				</div>
+
+				<% if (walineEnabled) { %>
+					<div class="kr-moment-actions">
+						<button
+							class="kr-moment-comment"
+							type="button"
+							data-comment-toggle="<%- commentContainerId %>"
+							data-comment-closed-label="<%- __('moments.comment') %>"
+							data-comment-open-label="<%- __('moments.comment_collapse') %>"
+							aria-controls="<%- commentContainerId %>"
+							aria-expanded="false"
+						>
+							<i class="fa fa-comments"></i>
+							<span data-comment-toggle-label><%- __('moments.comment') %></span>
+						</button>
+					</div>
+					<div
+						class="kr-moment-comments"
+						id="<%- commentContainerId %>"
+						data-comment-path="/moments/<%- momentId %>"
+						aria-hidden="true"
+					></div>
+				<% } else if (momentsConfig.comments?.enable) { %>
+					<div class="kr-moment-actions">
+						<span class="kr-moment-comment-disabled"><%- __('moments.comment_disabled') %></span>
+					</div>
+				<% } %>
+			</section>
+		<% }) %>
+	</div>
+</article>

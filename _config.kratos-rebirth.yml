@@ -1,0 +1,77 @@
+# Kratos-Rebirth 主题配置
+
+# 图片配置
+image:
+  favicon: "" 
+  avatar: "/images/user.svg" 
+  banner: 
+    light: "/images/default.webp" 
+    dark: "/images/default.webp" 
+  background: 
+    light: "" 
+    dark: "" 
+  about: 
+    light: "/images/default.webp" 
+    dark: "/images/default.webp" 
+
+# 导航栏配置
+nav:
+  auto_hide: true 
+  items:
+    - label: 首页
+      icon: fa-home
+      url: /
+    - label: 归档
+      icon: fa-archive
+      url: /archives/
+    - label: 标签
+      icon: fa-tags
+      url: /tags/
+    - label: 分类
+      icon: fa-folder-open
+      url: /categories/
+    - label: 搜索
+      icon: fa-search
+      url: /search/
+
+# 侧边栏与小挂件
+sidebar:
+  location: right 
+  widgets:
+    - about 
+    - splitter 
+    - category 
+    - tagcloud 
+    - posts 
+
+# 搜索
+search:
+  provider: "local" 
+  path: 
+    page: search
+    index_file: search-index.json
+  includes: 
+    - post
+    - page
+  content: true 
+
+# 文章的列表配置
+index:
+  style: "card" 
+
+# 评论系统
+comments:
+  core:
+    enable_at: []
+    template:
+      _shared: ""
+      index: ""
+      post: ""
+      page: ""
+  count:
+    enable_at: []
+    template:
+      _shared: ""
+      index: ""
+      post: ""
+  path_hasher: "md5"

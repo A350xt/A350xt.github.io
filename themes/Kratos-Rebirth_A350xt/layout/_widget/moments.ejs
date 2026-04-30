@@ -1,0 +1,57 @@
+<%
+	if (!theme.moments || !theme.moments.enable) {
+		return;
+	}
+
+	const widgetConfig = theme.moments.widget || {};
+	const rawList = [...kr_moments_entries()];
+	const limit = widgetConfig.limit || 3;
+	const pagePath = theme.moments.page?.path || 'moments/index.html';
+	const formatMomentId = (raw, idx) =>
+		(raw || `moment-${idx}`)
+			.toString()
+			.trim()
+			.toLowerCase()
+			.replace(/[^a-z0-9_-]+/g, "-");
+	const momentsList = rawList.slice(0, limit).map((moment, index) => {
+		const id = formatMomentId(moment.id, index);
+		return {
+			id,
+			text: moment.text,
+			date: moment.date,
+			url: `${url_for(pagePath)}#${id}`,
+		};
+	});
+
+	if (!momentsList.length) {
+		return;
+	}
+
+	const truncate = (text, length = 80) => {
+		if (!text) return '';
+		const plain = strip_html(markdown(text));
+		return plain.length > length ? plain.slice(0, length) + '…' : plain;
+	};
+%>
+
+<div class="widget widget-kratos-moments">
+	<div class="widget-title">
+		<i class="fa fa-bolt"></i>
+		<span><%- __('moments.widget_title') %></span>
+		<a class="kr-moments-more" href="<%- url_for(theme.moments.page?.path || 'moments/index.html') %>">
+			<%- __('moments.widget_more') %>
+		</a>
+	</div>
+	<ul class="kr-moments-widget-list">
+		<% momentsList.forEach((moment) => { %>
+			<li>
+				<a class="kr-moments-widget-link" href="<%- moment.url %>">
+					<p class="kr-moments-widget-text"><%- truncate(moment.text, widgetConfig.excerpt_length || 80) %></p>
+					<% if (widgetConfig.show_date && moment.date) { %>
+						<time datetime="<%- date_xml(moment.date) %>"><%- date(moment.date, 'MM-DD HH:mm') %></time>
+					<% } %>
+				</a>
+			</li>
+		<% }) %>
+	</ul>
+</div>

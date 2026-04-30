@@ -1,0 +1,70 @@
+<% const themeMoments = theme.moments || {}; %>
+<% const themeMomentsComments = themeMoments.comments || {}; %>
+<% const themeMomentsWaline = themeMomentsComments.waline || {}; %>
+<% const themeMomentsWalineCdn = themeMomentsWaline.cdn || {}; %>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "<%- url_for('/') %>";
+    window.kr.moments = <%- JSON.stringify({
+      enable: Boolean(themeMoments.enable),
+      comments: {
+        enable: Boolean(themeMomentsComments.enable),
+        provider: themeMomentsComments.provider,
+        waline: themeMomentsComments.provider === 'waline'
+          ? {
+              serverURL: themeMomentsWaline.server_url || '',
+              lang: themeMomentsWaline.lang || 'zh-CN',
+              emoji: themeMomentsWaline.emoji || [],
+              login: themeMomentsWaline.login || 'enable',
+              reaction: themeMomentsWaline.reaction || false,
+              placeholder: themeMomentsWaline.placeholder || '',
+              dark: themeMomentsWaline.dark || '',
+              meta: themeMomentsWaline.meta || ['nick'],
+              requiredMeta: themeMomentsWaline.required_meta || ['nick'],
+            }
+          : null,
+        walineAssets: themeMomentsComments.provider === 'waline'
+          ? {
+              js: themeMomentsWalineCdn.js || '',
+              css: themeMomentsWalineCdn.css || '',
+              module: Boolean(themeMomentsWalineCdn.module),
+            }
+          : null,
+      },
+    }) %>;
+</script>
+
+<% if (theme.pjax || theme.search.provider === "local") { %>
+  <%- js_npm_cdn('nprogress', 'nprogress.js', {defer: true}) %>
+<% } %>
+
+<% if (page.type !== '404' && theme.viewerjs) { %>
+  <%- js_npm_cdn('viewerjs', 'dist/viewer.min.js', {defer: true}) %>
+<% } %>
+
+<%- js_theme_cdn('js/kr-core.min.js', {defer: true}) %>
+
+<% if (
+  themeMoments.enable &&
+  themeMomentsComments.enable &&
+  themeMomentsComments.provider === 'waline' &&
+  themeMomentsWalineCdn.js
+) { %>
+  <script src="<%- themeMomentsWalineCdn.js %>" <%- themeMomentsWalineCdn.module ? 'type="module"' : 'defer' %>></script>
+<% } %>
+
+<% if (themeMoments.enable) { %>
+  <%- js_theme_cdn('js/kr-moments.min.js', {defer: true}) %>
+<% } %>
+
+<% if (theme.pjax) { %>
+  <%- js_theme_cdn('js/kr-pjax.min.js', {defer: true}) %>
+<% } %>
+
+<!-- 额外的追加注入项 -->
+<% if (theme.additional_injections.after_footer) { %>
+  <%- theme.additional_injections.after_footer %>
+<% } %>
