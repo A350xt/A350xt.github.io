@@ -98,6 +98,39 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: Kratos-Rebirth_A350xt
+theme_config:
+  nav:
+    auto_hide: true
+    items:
+      - label: 首页
+        icon: fa-home
+        url: /
+      - label: 归档
+        icon: fa-archive
+        url: /archives/
+      - label: 标签
+        icon: fa-tags
+        url: /tags/
+      - label: 分类
+        icon: fa-folder-open
+        url: /categories/
+      - label: 动态
+        icon: fa-bolt
+        url: /moments/
+      - label: 搜索
+        icon: fa-search
+        url: /search/
+        float_right: true
+  sidebar:
+    location: right
+    widgets:
+      - about
+      - splitter
+      - toc
+      - posts
+      - moments
+      - category
+      - tagcloud
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
