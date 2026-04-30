@@ -36,6 +36,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install theme dependencies
+        run: pnpm --dir themes/Kratos-Rebirth_A350xt install --frozen-lockfile
+
+      - name: Build theme assets
+        run: pnpm --dir themes/Kratos-Rebirth_A350xt run build
+
       - name: Generate Pages-specific Hexo config
         shell: pwsh
         run: |
